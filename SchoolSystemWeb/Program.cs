@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using SchoolSystem.Data.Data;
+
 namespace SchoolSystemWeb
 {
     public class Program
@@ -8,8 +11,9 @@ namespace SchoolSystemWeb
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
-            var app = builder.Build();
+			builder.Services.AddDbContext<AppDbContext>(options =>
+			options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

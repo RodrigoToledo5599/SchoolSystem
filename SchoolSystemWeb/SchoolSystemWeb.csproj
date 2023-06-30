@@ -12,4 +12,8 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\SchoolSystem.Data\SchoolSystem.Data.csproj" />
+	</ItemGroup>
 </Project>

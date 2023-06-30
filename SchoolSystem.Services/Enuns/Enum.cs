@@ -18,12 +18,19 @@ namespace SchoolSystem.Services.Enuns
 		serie7 = 7,
 		serie8 = 8,
 		serie9 = 9,
-		medio1 = 10,
-		medio2 = 11,
-		medio3 = 12,
+		
 		
 	}
 
-	
+	enum Materias
+	{
+		matematica = 1,
+		portugues = 2,
+		historia = 3,
+		geografia = 4,
+		ciencias = 5,
+		ingles = 6,
+		artes = 7
+	}
 
 }

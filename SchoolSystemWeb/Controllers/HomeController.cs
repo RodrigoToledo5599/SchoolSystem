@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using SchoolSystemWeb.Models;
+using SchoolSystem.Models;
 
 namespace SchoolSystemWeb.Controllers
 {
