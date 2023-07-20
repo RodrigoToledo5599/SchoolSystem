@@ -11,9 +11,14 @@ namespace SchoolSystem.Models.Models
 	public class Materia
 	{
 		[Key]
-		public int IdMateria { get; set; }
-		public int MateriaCode { get; set; }
-		[NotMapped]
-		public IEnumerable<int> notas { get; set; }
+		public int Id { get; set; }
+		public int Nome { get; set; }
+
+
+
+		
+		/*public int? AlunosId { get; set; }
+		// [ForeignKey("IdAlunos")]
+		public IEnumerable<Aluno>? Alunos { get; set; }*/
 	}
 }
