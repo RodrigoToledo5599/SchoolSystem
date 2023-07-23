@@ -8,7 +8,7 @@ using SchoolSystem.Models.Models;
 
 namespace SchoolSystem.Data.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet <Aluno> Alunos { get; set; }
@@ -19,6 +19,9 @@ namespace SchoolSystem.Data.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
+
             modelBuilder.Entity<Aluno>().HasData(
                 new Aluno { Id = 1, Matricula = "222", Senha = "2", Serie = 3, Name = "Rodrigo"},
                 new Aluno { Id = 2, Matricula = "333", Senha = "3", Serie = 3, Name = "Ronaldo"},

@@ -1,0 +1,47 @@
+﻿@using SchoolSystem.Models.Models;
+@model List<Aluno>
+
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Aluno</th>
+			<th>Serie</th>
+
+		</tr>
+
+	</thead>
+	<tbody>
+		@foreach(var aluno in Model)
+		{
+			<tr>
+				<td>
+					@aluno.Name
+				</td>
+
+				@if(aluno.Serie != null)
+				{
+					<td>
+						@aluno.Serie
+					</td>
+				}
+				else
+				{
+					<td>
+						Sem turma ainda
+					</td>
+				}
+				
+			</tr>
+			
+		}
+	</tbody>
+	
+
+
+
+
+
+
+
+</table>
